@@ -1,0 +1,246 @@
+:root {
+    --primary-color: #0a1118;
+    --primary-color-opacity: rgba(10, 17, 24, 0.7);
+    --primary-color-highlight: #233d54;
+    --bs-body-bg: #fbf0f6
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* a:visited{
+    color: var(--primary-color-highlight);
+} */
+
+
+/* 
+  @media (min-width: 544px)  {}
+  @media (min-width: 768px)  {}
+  @media (min-width: 992px)  {}
+  @media (min-width: 1200px) {}
+  @media (min-width: 1400px) {}
+  @media (min-width: 1600px) {} 
+*/
+
+.container-custom {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    .container-custom {
+        width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container-custom {
+        width: 1340px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container-custom {
+        width: 1520px;
+    }
+}
+
+.header {
+    background-color: var(--primary-color-opacity);
+    z-index: 2;
+}
+
+#navbar {
+    z-index: 4;
+    position: fixed;
+    overflow-y: scroll;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b3aca0;
+}
+
+.dropdown-nav_closeNavBtn {
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    background-color: rgb(179, 172, 160);
+}
+
+.dropdown-nav_container {
+    height: 100vh;
+    padding: 0 1rem;
+}
+.bi-x-square{
+    font-size: 2rem;
+
+}
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--primary-color);
+}
+
+@media (min-width: 1400px) {
+    .hero_heading {
+        font-size: 3.2rem;
+    }
+}
+
+.hero_video {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hero_overlay {
+    position: absolute;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.hero_content {
+    z-index: 1;
+}
+
+.hero_content-width {
+    max-width: 540px;
+}
+
+.hero_scroll-btn {
+    color: var(--bs-light);
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.hero_scroll-btn:hover {
+    color: var(--bs-light);
+    opacity: 0.8;
+}
+
+.hero_scroll-btn .bi {
+    transition-delay: 3s;
+    animation: bounce 0.8s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(6px);
+    }
+}
+
+.steps {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.steps_section-thumbnail {
+    height: 240px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.steps_content-width {
+
+    max-width: 456px;
+    margin: 0 auto;
+}
+
+@media (min-width: 544px) {
+    .steps {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .steps_section-thumbnail {
+        height: auto;
+    }
+}
+
+.steps--background {
+    background-color: #66595b;
+    color: white;
+}
+
+.bi-button {
+    /* position: absolute;
+    display:inline-block; */
+    left: 50%;
+    translate: -50%;
+    animation: stretch 15s ease-in-out infinite alternate;
+}
+
+/* .bi-button .bi{
+    transition-delay: 2s;
+    animation-delay: 2s;
+    animation: stretch 0.8s infinite alternate;
+}
+@-webkit-keyframes stretch {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(20px);
+    }
+} */
+
+@keyframes stretch {
+    from {
+        transform: scale(1);
+
+    }
+
+    to {
+        transform: scale(1.2);
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width:500px) {
+    .bi-button {
+        justify-content: end;
+        display: inline-block;
+        text-align: center;
+    }
+
+}
+
+.footer .border-highlight {
+    border-top: 1px solid var(--primary-color-highlight);
+}
